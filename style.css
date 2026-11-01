@@ -1,0 +1,101 @@
+:root {
+  --bg: #12322b;
+  --paper: #efe6d2;
+  --accent: #c9a45c;
+  --muted: #b9b29f;
+  --line: rgba(201, 164, 92, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--paper);
+  font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+main, header, footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--paper);
+  text-decoration: none;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.brand img { width: 44px; height: 44px; }
+
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+
+nav a, footer a, main a { color: var(--accent); }
+
+nav a { text-decoration: none; font-size: 0.95rem; }
+
+nav a:hover, nav a[aria-current="page"] { text-decoration: underline; }
+
+h1, h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  line-height: 1.2;
+  color: var(--paper);
+}
+
+h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 48px 0 12px; }
+
+h2 { font-size: 1.4rem; margin: 40px 0 8px; color: var(--accent); }
+
+.lead { font-size: 1.15rem; color: var(--paper); }
+
+.meta { color: var(--muted); font-size: 0.9rem; }
+
+.hero { text-align: center; padding: 40px 0 8px; }
+
+.hero img { width: 160px; height: 160px; }
+
+.hero h1 { margin-top: 16px; }
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin: 28px 0;
+}
+
+ul { padding-left: 1.2rem; }
+
+li { margin: 6px 0; }
+
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  header { flex-direction: column; align-items: flex-start; }
+}
